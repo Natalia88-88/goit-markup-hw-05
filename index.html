@@ -524,7 +524,7 @@
         </div>
 
         <div class="footer-media">
-          <p class="footer-social-title">Social media</p>
+          <p class="footer-title">Social media</p>
 
           <ul class="social-blok footer-blok">
             <li class="social-blok-link">
@@ -573,7 +573,83 @@
             </li>
           </ul>
         </div>
+
+        <div class="footer-form-box">
+          <p class="footer-title title-subs">Subscribe</p>
+
+          <form class="footer-form">
+            <input
+              class="footer-form-input"
+              type="email"
+              name="email"
+              placeholder="E-mail"
+              required
+            />
+            <button class="footer-form-btn" type="submit">
+              Subscribe
+              <svg class="footer-form-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-telegram"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </footer>
+
+    <!-- FORM -->
+    <div class="overlay-form">
+      <form class="pop-up" name="contact" method="post">
+        <button type="button" class="close-btn">
+          <svg class="close-icon" width="24" height="24">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+        <p class="overlay-form-title">
+          Leave your contacts and we will call you back
+        </p>
+
+        <fieldset class="form-fields">
+          <label for="form-name" class="form-label">Name</label>
+          <input class="form-input" type="text" name="form-name" required />
+        </fieldset>
+
+        <fieldset class="form-fields">
+          <label for="form-phone" class="form-label">Phone</label>
+          <input class="form-input" type="tel" name="form-phone" required />
+        </fieldset>
+
+        <fieldset class="form-fields">
+          <label for="form-email" class="form-label">Email</label>
+          <input
+            class="form-input"
+            type="email"
+            name="form-email"
+            value=""
+            required
+          />
+        </fieldset>
+
+        <fieldset class="form-fields">
+          <label for="form-comment">Comment</label>
+          <textarea name="form-comment" placeholder="Text input"></textarea>
+
+          <fieldset class="form-fields-privacy">
+            <input
+              class="form-input"
+              type="checkbox"
+              name="form-checkbox"
+              value=""
+            />
+            <p class="privacy">
+            I accept the terms and conditions of the
+            <a class="privacy-link" href="" target="_blank">Privacy Policy</a>
+          </p>
+        </fieldset>
+
+        <fieldset class="button-send">
+          <input class="button" type="submit" value="Send" />
+        </fieldset>
+      </form>
+    </div>
   </body>
 </html>
