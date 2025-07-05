@@ -578,6 +578,7 @@
           <p class="footer-title title-subs">Subscribe</p>
 
           <form class="footer-form">
+            <label class="visually-hidden" for="footer-email"></label>
             <input
               class="footer-form-input"
               type="email"
@@ -597,60 +598,99 @@
     </footer>
 
     <!-- FORM -->
-    <div class="overlay-form">
-      <form class="pop-up" name="contact" method="post">
-        <button type="button" class="close-btn">
-          <svg class="close-icon" width="8" height="8">
-            <use href="./images/icons.svg#icon-close-black"></use>
-          </svg>
-        </button>
-        <p class="overlay-form-title">
-          Leave your contacts and we will call you back
-        </p>
-
-        <div class="form-fields">
-          <label for="form-name" class="form-label">Name</label>
-          <input class="form-input" type="text" name="form-name" required />
-        </div>
-
-        <div class="form-fields">
-          <label for="form-phone" class="form-label">Phone</label>
-          <input class="form-input" type="tel" name="form-phone" required />
-        </div>
-
-        <div class="form-fields">
-          <label for="form-email" class="form-label">Email</label>
-          <input
-            class="form-input"
-            type="email"
-            name="form-email"
-            value=""
-            required
-          />
-        </div>
-
-        <div class="form-fields-comment">
-          <label for="form-comment" class="form-label">Comment</label>
-          <textarea name="form-comment" placeholder="Text input"></textarea>
-        </div>
-
-        <div class="form-fields-privacy">
-          <input
-            class="form-input"
-            type="checkbox"
-            name="form-checkbox"
-            value=""
-          />
-          <p class="privacy">
-            I accept the terms and conditions of the
-            <a class="privacy-link" href="" target="_blank">Privacy Policy</a>
+    <div class="backdrop is-open">
+      <div class="modal">
+        <form class="pop-up" name="contact" method="post">
+          <button type="button" class="close-btn">
+            <svg class="close-icon" width="8" height="8">
+              <use href="./images/icons.svg#icon-close-black"></use>
+            </svg>
+          </button>
+          <p class="form-title">
+            Leave your contacts and we will call you back
           </p>
-        </div>
 
-        <div class="btn-send">
-          <input class="button" type="submit" value="Send" />
-        </div>
-      </form>
+          <div class="form-modal">
+            <label for="form-name" class="form-modal-label">Name</label>
+            <div class="form-modal-input">
+              <svg class="form-icon-style" width="12" height="12">
+                <use href="./images/icons.svg#icon-name"></use>
+              </svg>
+              <input
+                class="form-input"
+                type="text"
+                id="form-name"
+                name="form-name"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="form-modal">
+            <label for="form-phone" class="form-modallabel">Phone</label>
+            <div class="form-modal-input">
+              <svg class="form-icon-style" width="13" height="13">
+                <use href="./images/icons.svg#icon-phone"></use>
+              </svg>
+              <input
+                class="form-input"
+                type="tel"
+                id="form-phone"
+                name="form-phone"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="form-modal">
+            <label for="form-email" class="form-modal-label">Email</label>
+            <div class="form-modal-input">
+              <svg class="form-icon-style" width="13" height="13">
+                <use href="./images/icons.svg#icon-email"></use>
+              </svg>
+              <input
+                class="form-input"
+                type="email"
+                id="form-email"
+                name="form-email"
+                value=""
+                required
+              />
+            </div>
+          </div>
+
+          <div class="form-modal-comment">
+            <label for="form-comment" class="form-modal-label">Comment</label>
+            <textarea
+              class="textarea"
+              name="form-comment"
+              id="form-comment"
+              placeholder="Text input"
+            >
+            </textarea>
+          </div>
+
+          <div class="form-modal-privacy">
+            <input
+              class="form-input visually-hidden"
+              type="checkbox"
+              id="form-checkbox"
+              name="form-checkbox"
+              value=""
+            /><svg class="checkbox-icon" width="16px" height="16px">
+              <use href="./images/icons.svg#icon-checkbox"></use>
+            </svg>
+            <label for="form-checkbox" class="privacy">
+              <span class="privacy-text">
+                I accept the terms and conditions of the</span
+              >
+              <a class="privacy-link" href="" target="_blank">Privacy Policy</a>
+            </label>
+          </div>
+
+          <button class="btn-send" type="submit" value="Send">Send</button>
+        </form>
+      </div>
     </div>
   </body>
 </html>
