@@ -613,9 +613,10 @@ footer-form-box {
   transform: translate(-50%, -50%) scale(1.5);
 }
 
-.pop-up {
+.modal-pop-up {
   display: flex;
   flex-direction: column;
+  border-radius: 4px;
   padding: 24px;
   background-color: #fcfcfc;
   position: relative;
@@ -654,6 +655,7 @@ footer-form-box {
   width: 100%;
   fill: #2e2f42;
 }
+
 .form-title {
   font-weight: 500;
   font-size: 16px;
@@ -683,6 +685,17 @@ footer-form-box {
   margin-bottom: 4px;
 }
 
+.form-input-box {
+  position: relative;
+}
+
+.form-icon-style {
+  position: absolute;
+  top: 45%;
+  left: 20px;
+  transform: translateY(-50%);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 .form-input {
   width: 100%;
   border-radius: 4px;
@@ -692,64 +705,54 @@ footer-form-box {
   background-color: #fcfcfc;
 }
 
-.form-icon-style {
-  position: absolute;
-  top: 60%;
-  left: 20px;
-  transform: translateY(-50%);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+.form-modal:hover .form-input + .form-icon-style,
+.form-modal:focus-within .form-input + .form-icon-style,
+.form-input:hover {
+  color: #4d5ae5;
+  border-color: #4d5ae5;
 }
-
-.form-modal:hover .form-icon-style,
-.form-modal:focus-within .form-icon-style,
-.form-modal:active .form-icon-style {
-  fill: #4d5ae5;
-}
-
-.form-input:hover + .form-icon-style {
-  fill: #4d5ae5;
-}
-
-/* .form-modal:hover .form-input,
-.form-modal:focus-within .form-input,
-.form-modal:active .form-input {
-  border: 1px solid #4d5ae5;
-} */
 
 .form-modal-comment {
   display: flex;
-  flex-direction: column;
   width: 100%;
-}
-
-.textarea::placeholder {
-  color: #8e8f99;
-  background-color: #fcfcfc;
-  border: 1px solid rgba(46, 47, 66, 0.4);
-  border-radius: 4px;
-  min-height: 120px;
-  padding-top: 8px;
-  padding-left: 16px;
+  flex-direction: column;
   resize: none;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.04em;
+  outline: none;
 }
 
-form-modal-privacy {
+.textarea:hover {
+  border-color: #4d5ae5;
+  background-color: #fcfcfc;
+  outline: none;
+}
+
+input:focus-visible,
+input:active {
+  outline: none;
+}
+
+.form-modal-privacy {
   display: inline-flex;
+  position: relative;
   width: 100%;
   border: none;
   justify-content: space-between;
 }
+
 .checkbox-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
   max-width: 100%;
   background-color: transparent;
   border-radius: 2px;
   border: 1px solid rgba(46, 47, 66, 0.4);
 }
-.privacy {
+.form-input-privacy {
+  padding-left: 16px;
+}
+
+.privacy-label {
   font-size: 12px;
   text-align: justify;
   line-height: 1.17;
