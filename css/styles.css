@@ -851,7 +851,7 @@ input:active {
 }
 
 .privacy-checkbox-icon {
-  display: inline-flex;
+  /* display: inline-flex; */
   justify-content: center;
   align-items: center;
   position: absolute;
@@ -880,6 +880,7 @@ input:active {
 .form-input-privacy:checked + .privacy-label .privacy-checkbox-icon {
   background-color: #404bbf;
   border: none;
+  fill: #f4f4fd;
 }
 
 .form-modal-privacy:hover .checkbox-icon,
