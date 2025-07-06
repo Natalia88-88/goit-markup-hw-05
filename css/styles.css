@@ -512,15 +512,15 @@ button {
 footer-form-box {
   display: flex;
   flex-direction: column;
-  /* margin-right: auto; */
+  margin-right: auto;
 }
 
 .footer-form {
   display: flex;
-
   max-width: 100%;
   padding-top: 8px;
   padding-bottom: 8px;
+  padding-left: 0;
 }
 
 .footer-form-icon-box {

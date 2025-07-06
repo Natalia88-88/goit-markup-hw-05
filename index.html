@@ -576,29 +576,26 @@
 
         <div class="footer-form-box">
           <p class="footer-title title-subs">Subscribe</p>
-
           <form class="footer-form">
-            <div class="footer-form-box-input">
-              <label class="footer-label" for="email"></label>
-              <div class="footer-form-icon-box">
+            <label class="footer-label" for="email"></label>
+            <div class="footer-form-icon-box">
+              <svg class="footer-form-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-email"></use>
+              </svg>
+              <input
+                class="footer-form-input"
+                type="email"
+                id="email"
+                name="email"
+                placeholder="E-mail"
+                required
+              />
+              <button class="footer-form-btn" type="submit">
+                Subscribe
                 <svg class="footer-form-icon" width="24" height="24">
-                  <use href="./images/icons.svg#icon-email"></use>
+                  <use href="./images/icons.svg#icon-telegram"></use>
                 </svg>
-                <input
-                  class="footer-form-input"
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="E-mail"
-                  required
-                />
-                <button class="footer-form-btn" type="submit">
-                  Subscribe
-                  <svg class="footer-form-icon" width="24" height="24">
-                    <use href="./images/icons.svg#icon-telegram"></use>
-                  </svg>
-                </button>
-              </div>
+              </button>
             </div>
           </form>
         </div>
@@ -606,15 +603,13 @@
     </footer>
 
     <!-- FORM  is-open -->
-    <div class="backdrop">
+    <div class="backdrop is-open">
       <div class="modal">
-        <div class="modal-btn">
-          <button type="button" class="close-btn">
-            <svg class="close-icon" width="8" height="8">
-              <use href="./images/icons.svg#icon-close-black"></use>
-            </svg>
-          </button>
-        </div>
+        <button type="button" class="close-btn">
+          <svg class="close-icon" width="8" height="8">
+            <use href="./images/icons.svg#icon-close-black"></use>
+          </svg>
+        </button>
         <form class="modal-pop-up" name="contact" method="post">
           <p class="form-title">
             Leave your contacts and we will call you back
