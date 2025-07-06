@@ -819,6 +819,9 @@ input:active {
 
 /* --------------- */
 
+.form-modal-privacy {
+  margin-bottom: 24px;
+}
 .privacy-label {
   display: flex;
   width: 100%;
@@ -830,17 +833,13 @@ input:active {
   letter-spacing: 0.04em;
   color: #8e8f99;
   margin-left: 8px;
-
-  margin-bottom: 28px;
 }
 .privacy-link {
   font-weight: 400;
   font-size: 12px;
-  line-height: 1.17;
   letter-spacing: 0.04em;
   line-height: 1.33;
   text-decoration: underline;
-
   color: #4d5ae5;
   cursor: pointer;
 }
@@ -855,7 +854,6 @@ input:active {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  justify-content: center;
   position: absolute;
   top: 0;
   left: 0;
@@ -873,23 +871,21 @@ input:active {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  height: 100%;
-  padding: 4px 3px;
-  position: absolute;
+  width: 10px;
+  height: 8px;
   fill: transparent;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-modal-privacy:hover .checkbox-icon {
+.form-input-privacy:checked + .privacy-label .privacy-checkbox-icon {
   background-color: #404bbf;
   border: none;
-  fill: #f4f4fd;
 }
 
-.form-input-privacy:checked + privacy-label > privacy-checkbox-icon {
-  background-color: #404bbf;
-  border: none;
+.form-modal-privacy:hover .checkbox-icon,
+.form-modal-privacy:focus-within .checkbox-icon,
+.form-modal-privacy:active .checkbox-icon {
+  fill: #f4f4fd;
 }
 
 .form-input-privacy.visually-hidden {
