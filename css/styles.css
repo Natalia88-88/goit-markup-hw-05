@@ -509,10 +509,19 @@ button {
   background-color: #31d0aa;
 }
 
+/* --------------- */
+
+.footer-title.title-subs {
+  max-width: 100%;
+}
+
+footer-form-icon-box {
+  display: flex;
+}
+
 footer-form-box {
   display: flex;
   flex-direction: column;
-  margin-right: auto;
 }
 
 .footer-form {
@@ -522,12 +531,10 @@ footer-form-box {
   padding-bottom: 8px;
   padding-left: 0;
 }
-
 .footer-form-icon-box {
   display: flex;
   gap: 24px;
 }
-
 .footer-form-input {
   width: 264px;
   height: 40px;
@@ -545,6 +552,7 @@ footer-form-box {
   letter-spacing: 0.04em;
   flex-grow: inherit;
 }
+
 /* ----------------- */
 .footer-form-btn {
   display: flax;
