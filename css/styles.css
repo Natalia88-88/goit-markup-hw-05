@@ -708,9 +708,15 @@ footer-form-box {
   background-color: #fcfcfc;
 }
 
-.form-modal:hover .form-input + .form-modal:hover > .form-icon-style {
-  color: #4d5ae5;
+.form-modal .form-input:focus,
+.form-modal .form-input:active,
+.form-modal .form-input:hover {
   border-color: #4d5ae5;
+}
+.form-modal .form-input:focus + .form-icon-style,
+.form-modal .form-input:hover + .form-icon-style,
+.form-modal .form-input:active + .form-icon-style {
+  color: #4d5ae5;
 }
 
 input,
