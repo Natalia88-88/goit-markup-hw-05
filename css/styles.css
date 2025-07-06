@@ -653,6 +653,9 @@ footer-form-box {
 
 .close-icon {
   width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
   fill: #2e2f42;
 }
 
@@ -705,24 +708,37 @@ footer-form-box {
   background-color: #fcfcfc;
 }
 
-.form-modal:hover .form-input + .form-icon-style,
-.form-modal:focus-within .form-input + .form-icon-style,
-.form-input:hover {
+.form-modal:hover .form-input + .form-modal:hover > .form-icon-style {
   color: #4d5ae5;
   border-color: #4d5ae5;
+}
+
+input,
+textarea,
+button {
+  font-family: inherit;
+  line-height: inherit;
+}
+
+textarea {
+  resize: none;
 }
 
 .form-modal-comment {
   display: flex;
   width: 100%;
   flex-direction: column;
-  resize: none;
-  outline: none;
 }
 
-.textarea:hover {
+.textarea.form-input {
+  padding-top: 8px;
+  padding-left: 16px;
+}
+
+.textarea:hover,
+.textarea:active,
+.textarea:focus {
   border-color: #4d5ae5;
-  background-color: #fcfcfc;
   outline: none;
 }
 
@@ -735,32 +751,59 @@ input:active {
   display: inline-flex;
   position: relative;
   width: 100%;
+  height: 16px;
   border: none;
+  padding-left: 28px;
   justify-content: space-between;
+  margin-top: 16px;
+  margin-bottom: 28px;
 }
 
 .checkbox-icon {
   position: absolute;
-  top: 0;
+  top: 1px;
   left: 0;
-  max-width: 100%;
+  width: 16px;
+  height: 16px;
+  padding: 4px 3px;
   background-color: transparent;
   border-radius: 2px;
   border: 1px solid rgba(46, 47, 66, 0.4);
 }
-.form-input-privacy {
-  padding-left: 16px;
+
+.checkbox-icon {
+  position: absolute;
+  top: 1px;
+  left: 0;
+  max-width: 100%;
+  padding: 4px 3px;
+  fill: #fcfcfc;
+}
+.form-modal-privacy:hover .checkbox-icon {
+  background-color: #404bbf;
+  border: none;
 }
 
-.privacy-label {
+.form-input-privacy:checked + .privacy-label > privacy-text {
+  background-color: #404bbf;
+  fill: #fcfcfc;
+}
+
+.privacy-text {
+  display: inline;
+  font-weight: 400;
   font-size: 12px;
-  text-align: justify;
   line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
 }
 
 .privacy-link {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.33;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
   color: #4d5ae5;
 }
 
