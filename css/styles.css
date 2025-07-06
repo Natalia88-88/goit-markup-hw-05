@@ -782,10 +782,6 @@ button {
   line-height: inherit;
 }
 
-textarea {
-  resize: none;
-}
-
 .form-modal-comment {
   display: flex;
   width: 100%;
@@ -800,10 +796,13 @@ textarea {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
-  color: #8e8f99;
   background-color: transparent;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
+  resize: none;
+  color: rgba(46, 47, 66, 0.4);
+  outline: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .textarea:hover,
@@ -818,37 +817,82 @@ input:active {
   outline: none;
 }
 
-.form-modal-privacy {
-  display: inline-flex;
-  position: relative;
-  border: none;
+/* --------------- */
+
+.privacy-label {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+  margin-left: 8px;
+
   margin-bottom: 28px;
 }
+.privacy-link {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  line-height: 1.33;
+  text-decoration: underline;
 
-.checkbox-icon {
+  color: #4d5ae5;
+  cursor: pointer;
+}
+
+.form-modal-privacy {
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+
+.privacy-checkbox-icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
   position: absolute;
   top: 0;
   left: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  fill: transparent;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 100%;
   padding: 4px 3px;
-  background-color: transparent;
-  border-radius: 2px;
-  border: 1px solid rgba(46, 47, 66, 0.4);
+  position: absolute;
+  fill: transparent;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-modal-privacy:hover .checkbox-icon {
   background-color: #404bbf;
   border: none;
-}
-
-.form-input-privacy:checked + .privacy-label > privacy-text {
-  background-color: #404bbf;
-  border: none;
   fill: #f4f4fd;
 }
 
-.privacy-checkbox-icon.visually-hidden {
+.form-input-privacy:checked + privacy-label > privacy-checkbox-icon {
+  background-color: #404bbf;
+  border: none;
+}
+
+.form-input-privacy.visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -859,39 +903,6 @@ input:active {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-}
-
-.privacy-checkbox-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  height: 16px;
-  width: 16px;
-  fill: transparent;
-  border: 1px solid rgba(46, 47, 66, 0.4);
-  border-radius: 2px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.privacy-label {
-  width: 100%;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.04em;
-  color: #8e8f99;
-  margin-left: 8px;
-}
-
-.privacy-link {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.33;
-  text-decoration: underline;
-  text-decoration-skip-ink: none;
-  color: #4d5ae5;
 }
 
 .btn-send {
