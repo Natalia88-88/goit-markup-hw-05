@@ -578,28 +578,35 @@
           <p class="footer-title title-subs">Subscribe</p>
 
           <form class="footer-form">
-            <label class="footer-label" for="email"></label>
-            <input
-              class="footer-form-input"
-              type="email"
-              id="email"
-              name="email"
-              placeholder="E-mail"
-              required
-            />
-            <button class="footer-form-btn" type="submit">
-              Subscribe
-              <svg class="footer-form-icon" width="24" height="24">
-                <use href="./images/icons.svg#icon-telegram"></use>
-              </svg>
-            </button>
+            <div class="footer-form-box-input">
+              <label class="footer-label" for="email"></label>
+              <div class="footer-form-icon-box">
+                <svg class="footer-form-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-email"></use>
+                </svg>
+                <input
+                  class="footer-form-input"
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="E-mail"
+                  required
+                />
+                <button class="footer-form-btn" type="submit">
+                  Subscribe
+                  <svg class="footer-form-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-telegram"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
           </form>
         </div>
       </div>
     </footer>
 
-    <!-- FORM -->
-    <div class="backdrop is-open">
+    <!-- FORM  is-open -->
+    <div class="backdrop">
       <div class="modal">
         <div class="modal-btn">
           <button type="button" class="close-btn">

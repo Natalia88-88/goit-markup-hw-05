@@ -517,10 +517,15 @@ footer-form-box {
 
 .footer-form {
   display: flex;
-  gap: 24px;
+
   max-width: 100%;
   padding-top: 8px;
   padding-bottom: 8px;
+}
+
+.footer-form-icon-box {
+  display: flex;
+  gap: 24px;
 }
 
 .footer-form-input {
@@ -528,8 +533,8 @@ footer-form-box {
   height: 40px;
   padding-top: 8px;
   padding-bottom: 8px;
+  padding-left: 16px;
   background-color: transparent;
-  /* background-color: #2e2f42; */
   border: 1px solid #fff;
   color: #ffffff;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
