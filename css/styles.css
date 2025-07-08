@@ -822,13 +822,12 @@ input:active {
 }
 .privacy-label {
   width: 100%;
-  text-align: center;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
-  margin-left: 8px;
+  gap: 8px;
 }
 .privacy-link {
   font-weight: 400;
@@ -848,11 +847,8 @@ input:active {
 
 .privacy-checkbox-icon {
   display: inline-flex;
-  justify-content: center;
   align-items: center;
-  position: absolute;
-  top: 0;
-  left: 0;
+  justify-content: center;
   width: 16px;
   height: 16px;
   border-radius: 2px;
